@@ -53,9 +53,12 @@ Answer the following:
 * Paste your ***nonce+word(s) and hash(s)*** below ( either 3x `000` hashes or 1x `0000`
 hash)
 
-97Kiwi  000317d693eb0bbd27b5050ace51efef66b1a506523a1fa642c80eb4cbd7cce0
-70Jackfruit  0008079ad37787e1c986823964c4e967e498eb142ed50ecb97fe11203fd909e0
-53Argentina  00029de4cbe5121dd28ffaea1273ccf1851122e2bb55c70ba0b066d7b6e6f7da
+
+97Kiwi       000317d693eb0bbd27b5050ace51efef66b1a506523a1fa642c80eb4cbd7cce0
+
+70Jackfruit     0008079ad37787e1c986823964c4e967e498eb142ed50ecb97fe11203fd909e0
+
+53Argentina     00029de4cbe5121dd28ffaea1273ccf1851122e2bb55c70ba0b066d7b6e6f7da
 
 ```
 
