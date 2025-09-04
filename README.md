@@ -5,6 +5,9 @@
 
 ### Task 1: Hashing
 
+NOTE: I messed up and did not clone the SSH at first. All my work was 
+	moved to the new clone. This is why there aren't 10 commits. 
+
 **Reminder Deliverable:** Is your `salted-data.csv` in this repository?
 
 Answer the following in this file:
@@ -50,20 +53,42 @@ Answer the following:
 * Paste your ***nonce+word(s) and hash(s)*** below ( either 3x `000` hashes or 1x `0000`
 hash)
 
-```
+97Kiwi  000317d693eb0bbd27b5050ace51efef66b1a506523a1fa642c80eb4cbd7cce0
+70Jackfruit  0008079ad37787e1c986823964c4e967e498eb142ed50ecb97fe11203fd909e0
+53Argentina  00029de4cbe5121dd28ffaea1273ccf1851122e2bb55c70ba0b066d7b6e6f7da
 
 ```
 
 * How many words were in your dictionary?
+
+78 words
+
 * How many nonces did your code iterate over?
+
+91
+
 * What was the maximum number of hashes your code *could* compute given the above?
+
+7098
+
 * What did you think about Task 2?
+
+I preferred it over Task 1, but that's only because I just manually hashed all the values for Task 1. 
+I really wanted to get a 5 0 hash and I had tried a sequence from 10-1000 with other lists, but running 
+it took quite a but of time and I ended up not finding one.
+
 * Is there a better way than brute force to attempt to get higher valued coins?
+
+I don't believe so.
+
 * Why or why not?
+
+I say this because there isn't a pattern to getting the 0's in the front of the hash. 
+It's just a lucky guess or using a script that takes up time if you want to try many different combinations. 
+Trial and error
 
 
 ```bash
-please put any cool bash one-liners or other piped commands you
-learned/struggled with for task 2 here
+ match=$(echo "$hashval" | awk ' /^[0]{3,}/') (struggled because I have not used awk in a long time)
 ```
 
