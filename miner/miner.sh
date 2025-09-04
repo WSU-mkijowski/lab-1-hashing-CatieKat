@@ -7,25 +7,23 @@ VARIABLE=some_string
 
 echo $VARIABLE
 
-## Prints all words in provided dictionary
-## (you might want to find a bigger dictionary)
-#for i in $(cat ../data/dictionary); do
- # printf \n $i
-#done
-
-
-## prints all numbers between 100 and 105
-#for i in $(seq 100 105); do
- # printf \n $i
-#doneF
+## Prepends words in provided dictionary with random numbers with double for loop
+## Prints the hash only if it begins with at least three "0's"
 
 for i in $(cat ../data/dictionary); do
 	for j in $(seq 10 100); do
-		hashval=$(echo -n "$j$i" | sha256sum | awk '{print $1}')
 
-		if [[ $hashval == 000* ]]; then
-			echo "Num is: $j, word is: $i Hash is: $hashval"
-		fi
+		nonceword=$(echo -n "$j$i")
+		hashval=$(echo -n $nonceword | sha256sum | awk '{print $1}')
+
+		## If hash has at least three "0's", place it in match variable
+		match=$(echo "$hashval" | awk ' /^[0]{3,}/')
+
+			## checks if the match variable is empty
+			## If not, prints the hash and word with nonce
+			if [ -n "$match" ]; then
+    				echo "nonce word is: $nonceword  Hash: $match "
+			fi
 	done
 done
 
